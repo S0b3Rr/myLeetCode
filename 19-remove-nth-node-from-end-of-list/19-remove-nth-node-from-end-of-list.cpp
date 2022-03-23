@@ -12,8 +12,8 @@ class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
         ListNode* fstPtr = head;
-        ListNode* secPtr = head; //maintain two pointers with n delay
-        ListNode* delPtr = head;
+        ListNode* secPtr = head; //maintain two pointers with n delay (pointing to the target)
+        ListNode* delPtr = head; //used when the target is the last in list
         int delay = n;
         while (fstPtr != NULL) {
             fstPtr = fstPtr -> next;
