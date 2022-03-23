@@ -16,7 +16,6 @@ public:
                 if (subbox[boxIndex].insert(board[i][j]).second == false && board[i][j] != '.')
                     return false;
             }
-            row.clear();
         }
         return true;
     }
