@@ -12,7 +12,7 @@ public:
                     return false;
                 if (col[j].insert(board[i][j]).second == false)
                     return false;
-                int boxIndex = (i / 3) * 3 + j / 3;
+                int boxIndex = i / 3 * 3 + j / 3;
                 if (subbox[boxIndex].insert(board[i][j]).second == false && board[i][j] != '.')
                     return false;
             }
