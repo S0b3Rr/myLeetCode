@@ -1,13 +1,19 @@
 class Solution {
 public:
     int firstUniqChar(string s) {
-        unordered_map<char, int> m;
-        for (char& c : s) 
-            m[c]++;
-        for (int i = 0; i < s.size(); i++) {
-            if (m[s[i]] == 1) 
-                return i;
+        unordered_map<char, int> map;
+        int ans = INT_MAX;
+        for(int i = 0; i < s.size(); i++){
+            if(map.find(s[i]) == map.end()){
+                map[s[i]] = i;
+            }
+            else{
+                map[s[i]] = INT_MAX;
+            }
         }
-        return -1;
+        for(auto& it : map){
+            ans = min(it.second, ans);
+        }
+        return (ans == INT_MAX)? -1 : ans;
     }
 };
