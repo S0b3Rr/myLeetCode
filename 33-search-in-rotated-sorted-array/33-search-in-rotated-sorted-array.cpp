@@ -5,7 +5,7 @@ public:
         int end = nums.size() - 1;
         int mid;
         
-        while(start < end){
+        while(start < end) {
             mid = start + (end - start)/2;
             if(nums[mid] < nums[end])
                 end = mid;
@@ -16,7 +16,7 @@ public:
     }
         
     int findIndex(int start, int end, vector<int>& nums, int target){
-        while(start <= end){
+        while(start <= end) {
             int mid = start + (end - start)/2;
              
             if(nums[mid] == target)
@@ -31,12 +31,10 @@ public:
     
     int search(vector<int>& nums, int target) {
         int pivot = findPivot(nums);
-        
         int n = nums.size() - 1;
-        
-         if(target >= nums[pivot] && target <=nums[n])
-             return findIndex(pivot, n, nums, target);
-         else
-             return findIndex(0, pivot - 1, nums, target);
+        if(target >= nums[pivot] && target <=nums[n])
+            return findIndex(pivot, n, nums, target);
+        else
+            return findIndex(0, pivot - 1, nums, target);
     }
 };
