@@ -2,7 +2,7 @@ class Solution {
 public:
     int findTarget(vector<int>& nums, int target, int lo, int hi) {
         if (lo <= hi) {
-            int mid = (lo + hi) / 2;
+            int mid = (hi - lo) / 2 + lo;
             if (nums[mid] == target)
                 return mid;
             else if (nums[mid] < target)
