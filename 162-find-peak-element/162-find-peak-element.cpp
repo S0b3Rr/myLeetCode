@@ -19,7 +19,6 @@ public:
     }
     
     int findPeakElement(vector<int>& nums) {
-        //if ()
         return binaryFind(nums, 0, nums.size() - 1);
     }
 };
