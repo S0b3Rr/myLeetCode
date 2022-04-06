@@ -12,7 +12,6 @@ public:
                 if (leftBound > rightBound)
                     continue;
                 ans.push_back({leftBound, rightBound});
-                //if ()
             }
             i++;
             j = 0;
