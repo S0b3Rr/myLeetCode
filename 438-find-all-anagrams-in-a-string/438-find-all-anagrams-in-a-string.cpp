@@ -3,22 +3,24 @@ public:
     vector<int> findAnagrams(string s, string p) {
         //sliding window
         vector<int> pList(26);
+        vector<int> sList(26);
         vector<int> ans;
         int size = p.size();
         if (size > s.size())
             return {};
         for (int i = 0; i < size; i++) {
             pList[p[i] - 'a']++;
+            sList[s[i] - 'a']++;
         }
-        for (int i = 0; i < s.size() - size + 1; i++) {
-            int j = 0;
-            vector<int> sList(26);
-            while (j < size) {
-                sList[s[i + j] - 'a']++;
-                j++;
-            }
+        if (sList == pList) //basecase
+            ans.push_back(0);
+        
+        for (int i = size; i < s.size(); i++) {
+            sList[s[i] - 'a']++;
+            sList[s[i - size] - 'a']--;
+            
             if (sList == pList)
-                ans.push_back(i);
+                ans.push_back(i - size + 1);
         }
         return ans;
     }
