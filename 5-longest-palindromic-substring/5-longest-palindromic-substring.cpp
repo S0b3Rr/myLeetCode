@@ -26,6 +26,13 @@ public:
     }
 };
 
+/* 
+
+从左向右逐一遍历，选定回文中心，从中心向两边展开而后记录
+时间复杂度为O(MN)， 空间复杂度为O(1)
+
+*/
+
 static const auto speedup = []()
 {
     std::ios::sync_with_stdio(false);
