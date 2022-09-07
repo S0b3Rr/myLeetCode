@@ -19,3 +19,9 @@ public:
         return strs[0].substr(0, ptr);
     }
 };
+
+static const auto speedup = []() {
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(nullptr);
+    return 0;
+}();
