@@ -11,6 +11,7 @@
  */
 class Solution {
 public:
+//------------------------------------solution 1--------------------------------------------
 //     bool isValidBST(TreeNode* node) {
 //         vector<int> inorderTree;
 //         inorderConvert(node, inorderTree);
