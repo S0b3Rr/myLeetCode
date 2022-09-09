@@ -13,3 +13,10 @@ public:
         //inspired by: https://www.youtube.com/watch?v=RrFg9SZ8VoM
     }
 };
+
+static const auto speedup = []()
+{
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(nullptr);
+    return 0;
+}();
