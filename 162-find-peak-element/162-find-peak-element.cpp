@@ -22,3 +22,10 @@ public:
         return binaryFind(nums, 0, nums.size() - 1);
     }
 };
+
+static const auto speedup = []()
+{
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(nullptr);
+    return 0;
+}();
