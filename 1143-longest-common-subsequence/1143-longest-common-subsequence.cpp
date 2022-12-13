@@ -1,3 +1,10 @@
+static const auto speedup = []()
+{
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(nullptr);
+    return 0;
+}();
+
 class Solution {
 public:
     int longestCommonSubsequence(string text1, string text2) {
@@ -25,6 +32,8 @@ public:
                 }
             }
         }
+        
+        //backtracking
         int i = text1.size(), j = text2.size();
         int ans = 0;
         while (i > 0 && j > 0) {
