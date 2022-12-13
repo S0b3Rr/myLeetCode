@@ -1,12 +1,11 @@
-static const auto speedup = []()
-{
+static const auto speedup = []() {
     std::ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
     return 0;
 }();
 
 class Solution {
-public:
+public:  
     int longestCommonSubsequence(string text1, string text2) {
         int dp[text1.size() + 1][text2.size() + 1];
         int backTrack[text1.size() + 1][text2.size() + 1];
