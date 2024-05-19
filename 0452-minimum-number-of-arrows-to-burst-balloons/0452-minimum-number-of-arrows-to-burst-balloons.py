@@ -4,12 +4,13 @@ class Solution:
         #雙指針
         slow, fast = 0, 1
         arrow = 0
+        length = len(points)
 
         while True:
-            if slow + fast >= len(points):
+            if slow + fast >= length:
                 arrow += 1
                 break
-            if points[slow][1] >= points[slow+fast][0]:
+            elif points[slow][1] >= points[slow+fast][0]:
                 fast += 1
             else:
                 arrow += 1
