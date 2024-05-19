@@ -3,7 +3,6 @@ class Solution:
         output = 0
 
         right_start = len(text) - 1
-        prefix = text[0]
         window = 1
         
         while True:
@@ -13,7 +12,6 @@ class Solution:
                     text = text[window:right_start] 
                     if not text:
                         break
-                    prefix = text[0]
                     window = 0
                     right_start = len(text)
                 elif right_start == 0:
