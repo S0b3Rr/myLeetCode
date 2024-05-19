@@ -1,13 +1,13 @@
 class Solution:
     def longestDecomposition(self, text: str) -> int:
         output = 0
-        left = 0
-        right = len(text) - 1
+
         right_start = len(text) - 1
         prefix = text[0]
         window = 1
+        
         while True:
-            if text[right_start] == prefix:
+            if text[right_start] == text[0]:
                 if text[:window] == text[right_start:] and right_start != 0:
                     output += 2
                     text = text[window:right_start] 
@@ -23,5 +23,3 @@ class Solution:
             right_start -= 1
 
         return output if not text else output + 1
-                
-            #"vwsuvmbwknmnvwsuvmbwk"
